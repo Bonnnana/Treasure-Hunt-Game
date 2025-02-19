@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://f64xsf1om4rj"]
+
+[ext_resource type="PackedScene" uid="uid://0fs6ukpk5oil" path="res://jonny.tscn" id="1_1wn8u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dwk47"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmlpa"]
+size = Vector3(10, 1, 10)
+
+[node name="TEST" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1.00598, 0, 0, 0, 0.214953, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_dwk47")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_vmlpa")
+
+[node name="Jonny" parent="." instance=ExtResource("1_1wn8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.801935, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.495438, -0.678825, 0.541977, 0.39642, 0.731865, 0.554279, -0.772912, -0.0597601, 0.631693, 2.41597, 4.92986, 1.73256)

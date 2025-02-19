@@ -1,0 +1,145 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwltysek1b0ub"]
+
+[ext_resource type="PackedScene" uid="uid://bghhhi1j31deo" path="res://Park.tscn" id="1_i2ri6"]
+[ext_resource type="PackedScene" uid="uid://0fs6ukpk5oil" path="res://jonny.tscn" id="2_yr1gu"]
+[ext_resource type="PackedScene" uid="uid://baihcjeytc2ov" path="res://coin.tscn" id="3_4dtao"]
+[ext_resource type="Script" path="res://timer.gd" id="4_vk3ge"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fbr11"]
+size = Vector3(450, 20, 450)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gm83q"]
+sky_top_color = Color(0.196078, 0.509804, 0.87451, 1)
+sky_horizon_color = Color(0.827198, 0.780613, 0.61157, 1)
+ground_bottom_color = Color(0.354016, 0.338031, 0.270084, 1)
+ground_curve = 0.0386376
+
+[sub_resource type="Sky" id="Sky_00vik"]
+sky_material = SubResource("ProceduralSkyMaterial_gm83q")
+
+[sub_resource type="Environment" id="Environment_trcuu"]
+background_mode = 2
+sky = SubResource("Sky_00vik")
+ambient_light_source = 2
+ambient_light_color = Color(0.520342, 0.628133, 0.792528, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="Park" parent="." instance=ExtResource("1_i2ri6")]
+
+[node name="Jonny" parent="." instance=ExtResource("2_yr1gu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.837741, 0)
+
+[node name="Coins" type="Node3D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -13.9345, 3.77203, 0)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -13.9345, 1.46379, 56.8447)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 32.34, 3.77203, -13.6029)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 24.3325, 9.11504, 92.2068)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -55.1029, 4.37409, 80.2147)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -55.1029, 2.62844, -46.2522)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -52.2472, 2.45622, -81.419)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 58.1843, 2.83757, -83.6904)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -90.5963, 5.1489, -83.6904)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("3_4dtao")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 59.643, 3.97802, -30.6934)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.917398, 0.393187, -0.0615222, -0.064793, 0.00496253, 0.997886, 0.392661, 0.919445, 0.0209231, -0.427444, 93.6069, -31.3735)
+
+[node name="FallZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -46.0647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone"]
+shape = SubResource("BoxShape3D_fbr11")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_trcuu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("4_vk3ge")
+
+[node name="Timer" type="Label" parent="CanvasLayer"]
+offset_left = 547.0
+offset_top = 23.0
+offset_right = 614.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 28
+text = "Time
+5:00"
+horizontal_alignment = 1
+
+[node name="TimerCountdown" type="Timer" parent="CanvasLayer"]
+autostart = true
+
+[node name="GameOver" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 356.0
+offset_top = 263.0
+offset_right = 812.0
+offset_bottom = 373.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 80
+text = "Game Over!"
+
+[node name="YouWin" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 401.0
+offset_top = 270.0
+offset_right = 857.0
+offset_bottom = 380.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 80
+text = "You Win!"
+
+[node name="TryAgainButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 527.0
+offset_top = 382.0
+offset_right = 648.0
+offset_bottom = 425.0
+theme_override_colors/font_hover_color = Color(0.859498, 0.379612, 0.486999, 1)
+theme_override_colors/font_color = Color(0.568627, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Try Again"
+
+[node name="CoinsCollected" type="Label" parent="CanvasLayer"]
+offset_left = 1056.0
+offset_top = 582.0
+offset_right = 1141.0
+offset_bottom = 609.0
+theme_override_colors/font_color = Color(0.873228, 0.971359, 0.533167, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 19
+text = "Collected"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="CanvasLayer/TimerCountdown" to="CanvasLayer" method="_on_timer_countdown_timeout"]
+[connection signal="pressed" from="CanvasLayer/TryAgainButton" to="CanvasLayer" method="_on_try_again_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://0fs6ukpk5oil"]
+
+[ext_resource type="Script" path="res://jonny.gd" id="1_qgiqs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_djr5l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8g77"]
+
+[node name="Jonny" type="CharacterBody3D"]
+script = ExtResource("1_qgiqs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_djr5l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_c8g77")
+
+[node name="Camera_Contorller" type="Node3D" parent="."]
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Contorller"]
+transform = Transform3D(1, 0, 0, 0, 0.9467, 0.322117, 0, -0.322117, 0.9467, 0, 1.2798, 5.41466)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Contorller/Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 0.985674, -0.168661, 0, 0.168661, 0.985674, 0, -0.515228, 0.652251)
+current = true

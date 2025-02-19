@@ -1,0 +1,568 @@
+[gd_scene load_steps=47 format=3 uid="uid://bghhhi1j31deo"]
+
+[ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="1_48g48"]
+[ext_resource type="Texture2D" uid="uid://bqxduevoppgcq" path="res://Assets/Textures/Grass002_1K-JPG/Grass002_1K-JPG_Color.jpg" id="2_347vr"]
+[ext_resource type="Texture2D" uid="uid://ds8e7oo0c18tu" path="res://Assets/Textures/Grass002_1K-JPG/Grass002_1K-JPG_NormalGL.jpg" id="3_g3dhq"]
+[ext_resource type="Texture2D" uid="uid://llkjijpyrioa" path="res://Assets/Textures/Grass002_1K-JPG/Grass002_1K-JPG_Roughness.jpg" id="4_nhlyo"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetResource.cs" id="5_5oi6e"]
+[ext_resource type="Texture2D" uid="uid://72vmo6x8yakm" path="res://Assets/Textures/Ground054_1K-JPG/Ground054_1K-JPG_Color.jpg" id="6_n5iun"]
+[ext_resource type="Texture2D" uid="uid://dhndbp2rv4bei" path="res://Park/Heightmap_0_0.res" id="7_364kj"]
+[ext_resource type="Texture2D" uid="uid://dqgasq002oqxg" path="res://Assets/Textures/Ground054_1K-JPG/Ground054_1K-JPG_NormalGL.jpg" id="7_e7hj7"]
+[ext_resource type="Texture2D" uid="uid://c334v162cpvsr" path="res://Assets/Textures/Ground054_1K-JPG/Ground054_1K-JPG_Roughness.jpg" id="8_8hksf"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="8_rg8x7"]
+[ext_resource type="Texture2D" uid="uid://be8vq1yk2bd7s" path="res://Assets/Textures/Rocks025_1K-JPG/Rocks025_1K-JPG_Color.jpg" id="9_5xqhm"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="9_fdxlt"]
+[ext_resource type="Texture2D" uid="uid://b32qrwb7l7scp" path="res://Assets/Textures/Rocks025_1K-JPG/Rocks025_1K-JPG_NormalGL.jpg" id="10_p5bwp"]
+[ext_resource type="Texture2D" uid="uid://dff2oj685hmy6" path="res://Assets/Textures/Rocks025_1K-JPG/Rocks025_1K-JPG_Roughness.jpg" id="11_4wm2p"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetsResource.cs" id="12_xpbk7"]
+[ext_resource type="Texture2D" uid="uid://cq64dptd1bm8q" path="res://Assets/Foliages/PNG/Flat/sprite_0001.png" id="13_21snq"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="14_4ltj3"]
+[ext_resource type="Texture2D" uid="uid://dpfepw7pgww8j" path="res://Park/Splatmap_0_0_0.res" id="14_82dha"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="15_n4cav"]
+[ext_resource type="Texture2D" uid="uid://cefqhg8gv1h47" path="res://Park/Foliage_0_0_0.res" id="16_1s8em"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="17_wp7ph"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="18_2w2v2"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/WaterResource.cs" id="19_lxm8v"]
+[ext_resource type="Texture2D" uid="uid://c11rcvsn13c07" path="res://Park/Object_0_0_0.res" id="21_xeqd7"]
+[ext_resource type="Texture2D" uid="uid://3rtejengfm66" path="res://Park/Water_0_0.res" id="24_d4r24"]
+[ext_resource type="Texture2D" uid="uid://bxt5faktjq55w" path="res://Assets/Models/Nature/Trees/jacaranda_tree_4k/textures/jacaranda_tree_trunk_diff_4k.jpg" id="25_hwtwe"]
+[ext_resource type="PackedScene" uid="uid://rlleb80ut7vp" path="res://Assets/Models/Nature/Trees/jacaranda_tree_4k/jacaranda_tree_4k.gltf" id="26_hcemt"]
+[ext_resource type="PackedScene" uid="uid://b40k018u8nqyk" path="res://Assets/Models/Benches/wooden_picnic_table_4k/wooden_picnic_table_4k.gltf" id="27_mci3y"]
+[ext_resource type="PackedScene" uid="uid://drq1fu11oft" path="res://Assets/Models/Benches/bench_model_free_gltf/bench.gltf" id="28_k46r2"]
+[ext_resource type="PackedScene" uid="uid://do2ngvwq051yr" path="res://Assets/Models/Nature/namaqualand_boulder_02_4k/namaqualand_boulder_02_4k.gltf" id="29_lnxl7"]
+[ext_resource type="PackedScene" uid="uid://blspweiuodv1d" path="res://Assets/Models/Nature/old_swings_gltf/scene.gltf" id="30_6w6dk"]
+[ext_resource type="PackedScene" uid="uid://db04llrqhc83f" path="res://Assets/Models/Nature/kids_slide_gltf/scene.gltf" id="31_6l0fy"]
+
+[sub_resource type="Resource" id="Resource_u5lb5"]
+script = ExtResource("5_5oi6e")
+Name = "Grass"
+AlbedoTexture = ExtResource("2_347vr")
+NormalTexture = ExtResource("3_g3dhq")
+RoughnessTexture = ExtResource("4_nhlyo")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_h0377"]
+script = ExtResource("5_5oi6e")
+Name = "Ground"
+AlbedoTexture = ExtResource("6_n5iun")
+NormalTexture = ExtResource("7_e7hj7")
+RoughnessTexture = ExtResource("8_8hksf")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_52lkb"]
+script = ExtResource("5_5oi6e")
+Name = "Rocks"
+AlbedoTexture = ExtResource("9_5xqhm")
+NormalTexture = ExtResource("10_p5bwp")
+RoughnessTexture = ExtResource("11_4wm2p")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_kn31p"]
+script = ExtResource("12_xpbk7")
+TextureSets = [SubResource("Resource_u5lb5"), SubResource("Resource_h0377"), SubResource("Resource_52lkb")]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqccw"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("13_21snq")
+
+[sub_resource type="QuadMesh" id="QuadMesh_m0jq2"]
+material = SubResource("StandardMaterial3D_xqccw")
+center_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="Resource" id="Resource_e4f22"]
+script = ExtResource("14_4ltj3")
+Strategy = 1
+Mesh = SubResource("QuadMesh_m0jq2")
+MeshScale = Vector3(1, 1, 1)
+WindStrength = 0.1
+VisualInstanceLayers = 1
+LODLevels = 3
+LODRowsPerLevel = 50
+LODInitialCellWidth = 1.0
+Albedo = Color(0.109856, 0.453462, 0.400451, 1)
+AlbedoTextures = []
+UseGroundColor = false
+CastShadow = false
+UseBrushScale = true
+RandomPlacementRange = 3.0
+ApplyOnTextureIndexes = PackedInt32Array()
+MaximumRenderDistance = 50
+EditorMaximumRenderDistance = 50
+
+[sub_resource type="Resource" id="Resource_wj2xh"]
+script = ExtResource("15_n4cav")
+Definition = SubResource("Resource_e4f22")
+
+[sub_resource type="Resource" id="Resource_7iiwa"]
+script = ExtResource("17_wp7ph")
+Strategy = 1
+ObjectFrequency = -1
+RandomRange = 3.0
+RandomYRotation = true
+ObjectScenes = []
+LODList = []
+LODMeshes = []
+UpdateDistanceThreshold = 1.0
+UpdateTimeFrequency = 0.1
+VisualInstanceLayers = 1
+
+[sub_resource type="Resource" id="Resource_1xixh"]
+script = ExtResource("18_2w2v2")
+Definition = SubResource("Resource_7iiwa")
+Hide = false
+
+[sub_resource type="Resource" id="Resource_l0t2a"]
+script = ExtResource("19_lxm8v")
+WaterFactor = 1.0
+WaterInnerOffset = 0.2
+WaterColor = Color(0.0696525, 0, 0.802203, 1)
+WaterFresnelColor = Color(1, 1, 1, 1)
+WaterMetallic = 0.0
+WaterRoughness = 0.0
+WaterTimeScale = 0.1
+WaterStrength = 0.4
+WaterNoiseScale = 10.0
+WaterHeightScale = 0.15
+WaterColorDeep = Color(1, 1, 1, 1)
+WaterColorShallow = Color(1, 1, 1, 1)
+WaterBeersLaw = 2.0
+WaterDepthOffset = -0.75
+WaterEdgeScale = 0.1
+WaterNear = 0.5
+WaterFar = 100.0
+WaterEdgeColor = Color(1, 1, 1, 1)
+VisualInstanceLayers = 1
+
+[sub_resource type="Resource" id="Resource_5e8tg"]
+script = ExtResource("8_rg8x7")
+ZonePosition = Vector2i(0, 0)
+HeightMapTexture = ExtResource("7_364kj")
+SplatmapsTexture = [ExtResource("14_82dha")]
+FoliagesTexture = [ExtResource("16_1s8em")]
+ObjectsTexture = [ExtResource("21_xeqd7")]
+WaterTexture = ExtResource("24_d4r24")
+
+[sub_resource type="Resource" id="Resource_08tl1"]
+script = ExtResource("9_fdxlt")
+Zones = [SubResource("Resource_5e8tg")]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wavk"]
+albedo_texture = ExtResource("25_hwtwe")
+
+[node name="Park" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.558619, 0)
+
+[node name="TerraBrush" type="Node3D" parent="."]
+script = ExtResource("1_48g48")
+DataPath = "res://Park"
+TextureSets = SubResource("Resource_kn31p")
+Foliages = [SubResource("Resource_wj2xh")]
+DefaultObjectFrequency = 1
+Objects = [SubResource("Resource_1xixh")]
+WaterDefinition = SubResource("Resource_l0t2a")
+TerrainZones = SubResource("Resource_08tl1")
+metadata/_edit_lock_ = false
+
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="Tree" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50811, 0, 0)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree" instance=ExtResource("26_hcemt")]
+
+[node name="Tree10" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.492, 0.291481, 0)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree10" instance=ExtResource("26_hcemt")]
+
+[node name="Tree11" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.492, 4.96324, 15)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree11" instance=ExtResource("26_hcemt")]
+
+[node name="Tree15" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.492, 2.90433, -32)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree15" instance=ExtResource("26_hcemt")]
+
+[node name="Tree16" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.471, 3.67948, 39.9264)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree16" instance=ExtResource("26_hcemt")]
+
+[node name="Tree17" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.492, 9.96587, 18)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree17" instance=ExtResource("26_hcemt")]
+
+[node name="Tree18" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.492, 7.2741, -14)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree18" instance=ExtResource("26_hcemt")]
+
+[node name="Tree19" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.492, 0.0941429, 113.434)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree19" instance=ExtResource("26_hcemt")]
+
+[node name="Tree20" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.073, -0.243763, 118.484)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree20" instance=ExtResource("26_hcemt")]
+
+[node name="Tree21" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4919, 4.2788, 92)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree21" instance=ExtResource("26_hcemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.37091, 0)
+
+[node name="Tree31" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2904, 3.7475, 62.3526)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree31" instance=ExtResource("26_hcemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72064, -3.5015, 0.670288)
+
+[node name="Tree32" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6616, 7.60268, 70.5491)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree32" instance=ExtResource("26_hcemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.37035, 0)
+
+[node name="Tree33" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.435, 12.4917, 117.228)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree33" instance=ExtResource("26_hcemt")]
+
+[node name="Tree34" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.90438, 5.97723, 117.228)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree34" instance=ExtResource("26_hcemt")]
+
+[node name="Tree35" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.32303, 9.76621, 108.41)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree35" instance=ExtResource("26_hcemt")]
+transform = Transform3D(0.993907, -0.11022, 0, 0.11022, 0.993907, 0, 0, 0, 1, 0, -1.09317, 0)
+
+[node name="Tree36" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.6262, 3.67277, 7.33996)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree36" instance=ExtResource("26_hcemt")]
+
+[node name="Tree22" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4919, 10.9262, 77)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree22" instance=ExtResource("26_hcemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.3264, 0)
+
+[node name="Tree23" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5081, 0.195317, -53)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree23" instance=ExtResource("26_hcemt")]
+
+[node name="Tree24" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5081, 4.09833, -39)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree24" instance=ExtResource("26_hcemt")]
+
+[node name="Tree25" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5081, 0, -46)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree25" instance=ExtResource("26_hcemt")]
+
+[node name="Tree26" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5081, 0, -98)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree26" instance=ExtResource("26_hcemt")]
+
+[node name="Tree27" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.508, 0.491722, -16)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree27" instance=ExtResource("26_hcemt")]
+
+[node name="Tree28" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.508, 3.04239, -1)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree28" instance=ExtResource("26_hcemt")]
+
+[node name="Tree29" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.5081, 9.31518, -4)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree29" instance=ExtResource("26_hcemt")]
+
+[node name="Tree30" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.508, -0.0658917, -28)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree30" instance=ExtResource("26_hcemt")]
+
+[node name="Tree12" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.4919, 6.7763, 4)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree12" instance=ExtResource("26_hcemt")]
+
+[node name="Tree13" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.492, 0.849944, -16)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree13" instance=ExtResource("26_hcemt")]
+
+[node name="Tree14" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.492, 8.1061, 28)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree14" instance=ExtResource("26_hcemt")]
+
+[node name="Tree2" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.81165, 0, 8.57995)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree2" instance=ExtResource("26_hcemt")]
+
+[node name="Tree3" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.9104, 0, -10.8969)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree3" instance=ExtResource("26_hcemt")]
+
+[node name="Tree4" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.4719, 0, -22.8326)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree4" instance=ExtResource("26_hcemt")]
+
+[node name="Tree5" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.4719, 9.53674e-07, 27.8965)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree5" instance=ExtResource("26_hcemt")]
+
+[node name="Tree6" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.4719, 0, -71.0173)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree6" instance=ExtResource("26_hcemt")]
+
+[node name="Tree7" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.9747, -0.0703602, -80.6697)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree7" instance=ExtResource("26_hcemt")]
+
+[node name="Tree8" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.1843, 0.0941973, 79.7369)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree8" instance=ExtResource("26_hcemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82617, 0, 0)
+
+[node name="Tree9" type="MeshInstance3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.1396, 0.0936565, 61.7635)
+material_override = SubResource("StandardMaterial3D_6wavk")
+skeleton = NodePath("../..")
+
+[node name="jacaranda_tree_4k" parent="Trees/Tree9" instance=ExtResource("26_hcemt")]
+
+[node name="Benches" type="Node3D" parent="."]
+
+[node name="Bench" type="MeshInstance3D" parent="Benches"]
+skeleton = NodePath("../..")
+
+[node name="wooden_picnic_table_4k" parent="Benches/Bench" instance=ExtResource("27_mci3y")]
+transform = Transform3D(1.72582, 0, 0, 0, 1.54945, 0, 0, 0, 1.14113, 7.64749, 0.211834, 2.94031)
+
+[node name="Bench6" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.28276, 0, -0.959191, 0, 1, 0, 0.959191, 0, 0.28276, 33.4705, -0.325071, -94.3638)
+skeleton = NodePath("../..")
+
+[node name="wooden_picnic_table_4k" parent="Benches/Bench6" instance=ExtResource("27_mci3y")]
+transform = Transform3D(1.72582, 0, 0, 0, 1.54945, 0, 0, 0, 1.14113, 7.64749, 0.211834, 2.94031)
+
+[node name="Bench7" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.135698, 0, -0.99075, 0, 1, 0, 0.99075, 0, 0.135698, 16.0465, -0.1725, -88.4146)
+skeleton = NodePath("../..")
+
+[node name="wooden_picnic_table_4k" parent="Benches/Bench7" instance=ExtResource("27_mci3y")]
+transform = Transform3D(1.72582, 0, 0, 0, 1.54945, 0, 0, 0, 1.14113, 7.64749, 0.211834, 2.94031)
+
+[node name="Bench8" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(-0.0218324, 0, -0.999762, 0, 1, 0, 0.999762, 0, -0.0218324, -3.42743, -0.122698, -85.8419)
+skeleton = NodePath("../..")
+
+[node name="wooden_picnic_table_4k" parent="Benches/Bench8" instance=ExtResource("27_mci3y")]
+transform = Transform3D(1.72582, 0, 0, 0, 1.54945, 0, 0, 0, 1.14113, 7.64749, 0.211834, 2.94031)
+
+[node name="Bench11" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.999913, 0, -0.0131944, 0, 1, 0, 0.0131944, 0, 0.999913, -0.768536, 0.128953, -24.5712)
+skeleton = NodePath("../..")
+
+[node name="wooden_picnic_table_4k" parent="Benches/Bench11" instance=ExtResource("27_mci3y")]
+transform = Transform3D(1.72582, 0, -7.45058e-08, 0, 1.54945, 0, 2.98023e-08, 0, 1.14113, 2.65621, 0.211834, 2.20174)
+
+[node name="Bench2" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(1.22232, 0, 0, 0, 1.2167, 0, 0, 0, 1.28331, -40.3103, 0, -2.63329)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench2" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench9" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(-0.156498, 0, -1.27275, 0, 1.2167, 0, 1.21226, 0, -0.164308, 33.7388, 0, 16.4949)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench9" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench10" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(-0.263725, 0, -1.25309, 0, 1.2167, 0, 1.19353, 0, -0.276885, 26.3231, 0, 15.3157)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench10" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench12" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.477048, 0, 1.18154, 0, 1.2167, 0, -1.12538, 0, 0.500854, 1.44992, 0, 53.4489)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench12" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench16" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(-1.04615, 0, 0.663699, 0, 1.2167, 0, -0.632153, 0, -1.09836, -15.5948, 0, 53.4489)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench16" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench17" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.939507, 0, -0.820928, 0, 1.2167, 0, 0.781909, 0, 0.986391, -70.023, 0, 46.6172)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench17" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench18" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(0.774025, 0, -0.993222, 0, 1.2167, 0, 0.946012, 0, 0.812652, -77.6608, 0.109371, 54.3257)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench18" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench4" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(-0.220232, 0, -1.26231, 0, 1.2167, 0, 1.20231, 0, -0.231222, -48.6821, 0, -71.6095)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench4" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896484, 0, 0)
+
+[node name="Bench3" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(1.11253, 0, 0.53157, 0, 1.2167, 0, -0.506305, 0, 1.16805, -41.7757, 0.142041, -18.046)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench3" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -1.29013, 0, -0.559223)
+
+[node name="Bench5" type="MeshInstance3D" parent="Benches"]
+transform = Transform3D(1.08552, 0.0370017, -0.58862, -0.0222242, 1.21591, 0.039855, 0.561434, -0.0234105, 1.13967, -57.122, 0.0143023, 36.3429)
+skeleton = NodePath("../..")
+
+[node name="Sketchfab_Scene" parent="Benches/Bench5" instance=ExtResource("28_k46r2")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -1.29013, 0, -0.559223)
+
+[node name="Stones" type="Node3D" parent="."]
+
+[node name="Stone" type="MeshInstance3D" parent="Stones"]
+transform = Transform3D(-0.323549, 0, 0.983585, 0, 1.13683, 0, -1.145, 0, -0.277937, 0, 0, 3.1358)
+
+[node name="namaqualand_boulder_02_4k" parent="Stones/Stone" instance=ExtResource("29_lnxl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.978378, 0, 0, -0.066583)
+
+[node name="Stone2" type="MeshInstance3D" parent="Stones"]
+transform = Transform3D(1.86737, 0, -0.486546, 0, 1.64164, 0, 0.54033, 0, 1.68149, -64.8591, 0, -75.7829)
+
+[node name="namaqualand_boulder_02_4k" parent="Stones/Stone2" instance=ExtResource("29_lnxl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.978378, 0, 0, -0.066583)
+
+[node name="Stone3" type="MeshInstance3D" parent="Stones"]
+transform = Transform3D(0.773445, 0, -1.60595, 0, 1.64164, 0, 1.78348, 0, 0.696456, -94.2007, 0, -127.262)
+
+[node name="namaqualand_boulder_02_4k" parent="Stones/Stone3" instance=ExtResource("29_lnxl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.978378, 0, 0, -0.066583)
+
+[node name="Swings" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.330581, 0, 0.0566389, 0, 0.345522, 0, -0.0619323, 0, -0.302326, 25.786, 0, -29.1975)
+
+[node name="Sketchfab_Scene" parent="Swings" instance=ExtResource("30_6w6dk")]
+
+[node name="Slide" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.22641, 0, -0.889112, 0, 1.81159, 0, 0.78934, 0, -1.38143, 27.6698, 0, -12.301)
+
+[node name="Sketchfab_Scene" parent="Slide" instance=ExtResource("31_6l0fy")]
+transform = Transform3D(3.59726, 0, 0, 0, 3.27458, 0, 0, 0, 3.51743, 0, 0, 0)
