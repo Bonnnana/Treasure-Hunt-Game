@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bghhhi1j31deo" path="res://Park.tscn" id="1_i2ri6"]
 [ext_resource type="PackedScene" uid="uid://0fs6ukpk5oil" path="res://jonny.tscn" id="2_yr1gu"]
 [ext_resource type="PackedScene" uid="uid://baihcjeytc2ov" path="res://coin.tscn" id="3_4dtao"]
-[ext_resource type="Script" path="res://timer.gd" id="4_vk3ge"]
+[ext_resource type="Script" path="res://Code/timer.gd" id="4_vk3ge"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fbr11"]
 size = Vector3(450, 20, 450)

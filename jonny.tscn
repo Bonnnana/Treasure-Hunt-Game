@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://0fs6ukpk5oil"]
 
-[ext_resource type="Script" path="res://jonny.gd" id="1_qgiqs"]
+[ext_resource type="Script" path="res://Code/jonny.gd" id="1_qgiqs"]
 [ext_resource type="Texture2D" uid="uid://bi4ips6v8vyp5" path="res://Assets/Models/Character/char_final_humanFemaleA.png" id="2_enfiy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_djr5l"]

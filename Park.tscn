@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bghhhi1j31deo"]
+[gd_scene load_steps=46 format=3 uid="uid://bghhhi1j31deo"]
 
 [ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="1_48g48"]
 [ext_resource type="Texture2D" uid="uid://bqxduevoppgcq" path="res://Assets/Textures/Grass002_1K-JPG/Grass002_1K-JPG_Color.jpg" id="2_347vr"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://b32qrwb7l7scp" path="res://Assets/Textures/Rocks025_1K-JPG/Rocks025_1K-JPG_NormalGL.jpg" id="10_p5bwp"]
 [ext_resource type="Texture2D" uid="uid://dff2oj685hmy6" path="res://Assets/Textures/Rocks025_1K-JPG/Rocks025_1K-JPG_Roughness.jpg" id="11_4wm2p"]
 [ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetsResource.cs" id="12_xpbk7"]
-[ext_resource type="Texture2D" uid="uid://cq64dptd1bm8q" path="res://Assets/Foliages/PNG/Flat/sprite_0001.png" id="13_21snq"]
 [ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="14_4ltj3"]
 [ext_resource type="Texture2D" uid="uid://dpfepw7pgww8j" path="res://Park/Splatmap_0_0_0.res" id="14_82dha"]
 [ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="15_n4cav"]
@@ -70,7 +69,6 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("13_21snq")
 
 [sub_resource type="QuadMesh" id="QuadMesh_m0jq2"]
 material = SubResource("StandardMaterial3D_xqccw")
