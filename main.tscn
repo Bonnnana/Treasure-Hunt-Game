@@ -69,6 +69,7 @@ transform = Transform3D(-0.917398, 0.393187, -0.0615222, -0.064793, 0.00496253, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -46.0647, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.6936, 0)
 shape = SubResource("BoxShape3D_fbr11")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

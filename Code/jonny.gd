@@ -63,5 +63,5 @@ func align_with_floor(normal):
 	xform.basis = xform.basis.orthonormalized()
 
 
-func _on_fall_zone_body_entered(body):
+func _on_fall_zone_body_entered():
 	get_tree().change_scene_to_file("res://main.tscn")
